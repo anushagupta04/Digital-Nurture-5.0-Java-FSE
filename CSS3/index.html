@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Community Event Portal</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            background-color: #f4f8fb;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="mainHeader">
+        <h1 style="color: red;">Local Community Event Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Upcoming Events</h2>
+
+        <div class="eventCard">
+            <h3>Music Night</h3>
+            <p class="description">Join us for an evening of live music and community fun.</p>
+        </div>
+
+        <div class="eventCard selected">
+            <h3>Food Festival</h3>
+            <p class="description">Enjoy delicious food from local vendors.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Event Registration</h2>
+        <form>
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email">
+            <button class="cta-button">Register</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Events Admin Table</h2>
+        <table>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>Music Night</td>
+                <td>10 June</td>
+                <td>Community Hall</td>
+            </tr>
+            <tr>
+                <td>Food Festival</td>
+                <td>15 June</td>
+                <td>City Park</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="news">
+        <h2>Community Bulletin</h2>
+        <p>
+            The local community is organizing several programs this month. Residents are encouraged
+            to participate in cultural events, health camps, workshops, and awareness drives.
+            These activities help build stronger bonds among citizens and improve community life.
+        </p>
+    </section>
+
+    <p class="hiddenText">This text is hidden using visibility hidden.</p>
+    <p class="noneText">This text is hidden using display none.</p>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Local Community Event Portal</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    margin: 20px;
+  }
+
+  h1, h2 {
+    color: #1d3557;
+  }
+
+  select, input, button {
+    padding: 8px;
+    margin: 8px 4px;
+    font-size: 16px;
+  }
+
+  #eventsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #eventsContainer div {
+    background-color: white !important;
+    border: 2px solid #457b9d !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    width: 280px !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  button {
+    background-color: #1d3557;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #457b9d;
+  }
+
+  span {
+    color: red;
+  }
+
+  #message {
+    color: green;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+
+  <h1>Local Community Event Portal</h1>
+
+  <select id="categoryFilter">
+    <option value="all">All</option>
+    <option value="Music">Music</option>
+    <option value="Workshop">Workshop</option>
+    <option value="Sports">Sports</option>
+  </select>
+
+  <input type="text" id="searchBox" placeholder="Search event by name">
+
+  <div id="loading" style="display:none;">Loading events...</div>
+  <div id="eventsContainer"></div>
+
+  <h2>Register for Event</h2>
+
+  <form id="registrationForm">
+    <input type="text" name="name" placeholder="Enter name">
+    <span id="nameError"></span>
+    <br><br>
+
+    <input type="email" name="email" placeholder="Enter email">
+    <span id="emailError"></span>
+    <br><br>
+
+    <select name="event">
+      <option value="">Select Event</option>
+      <option value="Music Concert">Music Concert</option>
+      <option value="Baking Workshop">Baking Workshop</option>
+      <option value="Football Match">Football Match</option>
+    </select>
+    <span id="eventError"></span>
+    <br><br>
+
+    <button type="submit" id="registerBtn">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script src="main.js"></script>
+</body>
+</html>

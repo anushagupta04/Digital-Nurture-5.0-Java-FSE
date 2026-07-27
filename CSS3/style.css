@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f8fb;
+    background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header styles */
+#mainHeader {
+    background-color: rgba(0, 123, 255, 0.85);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    list-style-position: inside;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #e0e0e0;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: orange;
+}
+
+/* Section heading styles */
+h2 {
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+    padding: 12px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+/* Grouping selector */
+h3, p {
+    margin-bottom: 10px;
+}
+
+/* Event card styles */
+.eventCard {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #007BFF;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Description text styles */
+.description {
+    text-align: justify;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* CTA button styles */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Form field styles */
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+}
+
+input:focus {
+    outline: 3px solid orange;
+}
+
+/* Table styles */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 12px;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* News column styles */
+.news {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+}
+
+/* Visibility comparison */
+.hiddenText {
+    visibility: hidden;
+}
+
+.noneText {
+    display: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .eventCard {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .news {
+        column-count: 1;
+    }
+
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+}
