@@ -1,0 +1,30 @@
+.portal-header {
+  background-color: #1f3c88;
+  color: white;
+  padding: 16px 32px;
+}
+
+.portal-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portal-header h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}

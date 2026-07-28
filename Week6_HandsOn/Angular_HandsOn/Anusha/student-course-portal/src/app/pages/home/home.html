@@ -1,0 +1,78 @@
+<section class="home-page">
+
+  <h1>{{ portalName }}</h1>
+
+  <p>
+    Welcome to the Student Course Portal.
+  </p>
+
+  <div class="stats-row">
+
+    <div class="stat-card">
+
+      @if (isLoading) {
+        <h2>...</h2>
+      } @else {
+        <h2>{{ coursesAvailable }}</h2>
+      }
+
+      <p>Courses Available</p>
+
+    </div>
+
+    <div class="stat-card">
+      <h2>3</h2>
+      <p>Enrolled</p>
+    </div>
+
+    <div class="stat-card">
+      <h2>3.8</h2>
+      <p>GPA</p>
+    </div>
+
+  </div>
+
+  @if (errorMessage) {
+    <div class="error-message">
+      {{ errorMessage }}
+    </div>
+  }
+
+  <button
+    type="button"
+    [disabled]="!isPortalActive"
+    (click)="onEnrollClick()"
+  >
+    Enrol Now
+  </button>
+
+  @if (message) {
+    <p class="message">
+      {{ message }}
+    </p>
+  }
+
+  <div class="search-area">
+
+    <label for="search">
+      Search course
+    </label>
+
+    <input
+      id="search"
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Enter course name"
+    >
+
+    <p>
+      Searching for:
+      {{ searchTerm }}
+    </p>
+
+  </div>
+
+  <app-course-summary-widget>
+  </app-course-summary-widget>
+
+</section>

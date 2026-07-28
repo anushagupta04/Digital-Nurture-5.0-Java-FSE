@@ -1,0 +1,34 @@
+<section class="summary-widget">
+
+  <h2>Course Summary</h2>
+
+  @if (isLoading) {
+
+    <p>Loading course count...</p>
+
+  } @else if (errorMessage) {
+
+    <p class="error-message">
+      {{ errorMessage }}
+    </p>
+
+  } @else {
+
+    <p>
+      Total courses:
+      <strong>
+        {{ totalCourses }}
+      </strong>
+    </p>
+
+  }
+
+  <button
+    type="button"
+    [disabled]="isLoading"
+    (click)="addSampleCourse()"
+  >
+    Add Sample Course
+  </button>
+
+</section>

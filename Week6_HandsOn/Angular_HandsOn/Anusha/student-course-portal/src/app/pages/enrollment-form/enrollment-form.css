@@ -1,0 +1,130 @@
+.enrollment-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f5f7fb;
+  min-height: calc(100vh - 100px);
+}
+
+.form-card {
+  width: 100%;
+  max-width: 620px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 12%);
+}
+
+.form-card h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #173b8f;
+}
+
+.form-description {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #222;
+}
+
+.form-group input,
+.form-group select {
+  padding: 11px 12px;
+  font-size: 16px;
+  border: 2px solid #c9ced8;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #173b8f;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 5px;
+}
+
+.checkbox-group input {
+  width: 18px;
+  height: 18px;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  color: #c62828;
+  font-size: 14px;
+}
+
+/* Angular automatically adds these form-state classes. */
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+  border-color: green;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.button-row button {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.submit-button {
+  background-color: #173b8f;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #102b69;
+}
+
+.submit-button:disabled {
+  background-color: #9299a8;
+  cursor: not-allowed;
+}
+
+.reset-button {
+  background-color: #5b6475;
+}
+
+.reset-button:hover {
+  background-color: #3f4653;
+}
+
+.success-message {
+  margin-top: 22px;
+  padding: 15px;
+  background-color: #e7f7eb;
+  color: #17652a;
+  border: 1px solid #78bf87;
+  border-radius: 6px;
+  font-weight: 600;
+}

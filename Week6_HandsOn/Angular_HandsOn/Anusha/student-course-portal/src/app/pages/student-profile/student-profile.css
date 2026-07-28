@@ -1,0 +1,36 @@
+.profile-page {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 25px;
+}
+
+.profile-page h1,
+.profile-page h2 {
+  color: #173b8f;
+}
+
+.student-info {
+  padding: 18px;
+  background-color: #eef3ff;
+  border-radius: 8px;
+}
+
+.enrolled-list {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.enrolled-course {
+  padding: 18px;
+  background-color: white;
+  border-left: 6px solid green;
+  border-radius: 7px;
+  box-shadow: 0 2px 7px rgb(0 0 0 / 12%);
+}
+
+.enrolled-course h3 {
+  margin-top: 0;
+  color: #173b8f;
+}

@@ -1,0 +1,130 @@
+<section class="course-list-container">
+
+  <h1>Available Courses</h1>
+
+  <div class="search-box">
+
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Search by course name or code"
+      (keyup.enter)="searchCourses()"
+    >
+
+    <button
+      type="button"
+      (click)="searchCourses()"
+    >
+      Search
+    </button>
+
+    <button
+      type="button"
+      class="clear-button"
+      (click)="clearSearch()"
+    >
+      Clear
+    </button>
+
+  </div>
+
+  @if (errorMessage) {
+    <div class="error-box">
+      {{ errorMessage }}
+    </div>
+  }
+
+  @if (isLoading) {
+
+    <p class="loading-message">
+      Loading courses...
+    </p>
+
+  } @else {
+
+    @if (filteredCourses.length > 0) {
+
+      <div class="course-grid">
+
+        @for (
+          course of filteredCourses;
+          track course.id
+          ) {
+
+          <div
+            class="course-item"
+            (click)="openCourse(course.id)"
+          >
+
+            <app-course-card
+              [course]="course"
+              (enrollRequested)="onEnroll($event)"
+            >
+            </app-course-card>
+
+            <button
+              type="button"
+              class="delete-button"
+              (click)="
+                deleteCourse(
+                  course.id,
+                  $event
+                )
+              "
+            >
+              Delete Course
+            </button>
+
+          </div>
+
+        }
+
+      </div>
+
+    } @else {
+
+      <p>No matching courses found.</p>
+
+    }
+
+  }
+
+  @if (selectedCourseId !== null) {
+
+    <section class="student-section">
+
+      <h2>
+        Students enrolled in course
+        {{ selectedCourseId }}
+      </h2>
+
+      @if (enrolledStudents.length > 0) {
+
+        @for (
+          student of enrolledStudents;
+          track student.id
+          ) {
+          <div class="student-card">
+            <strong>
+              {{ student.name }}
+            </strong>
+
+            <span>
+              {{ student.email }}
+            </span>
+          </div>
+        }
+
+      } @else {
+
+        <p>
+          No students are enrolled in this course.
+        </p>
+
+      }
+
+    </section>
+
+  }
+
+</section>

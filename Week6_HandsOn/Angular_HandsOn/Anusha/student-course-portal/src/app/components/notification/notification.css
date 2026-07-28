@@ -1,0 +1,17 @@
+.notification-box {
+  margin-top: 30px;
+  padding: 18px;
+  color: #173b8f;
+  background-color: #eef3ff;
+  border: 1px solid #b8c7ed;
+  border-radius: 8px;
+}
+
+.notification-box button {
+  padding: 8px 14px;
+  color: white;
+  background-color: #173b8f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

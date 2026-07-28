@@ -1,0 +1,81 @@
+.home-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+}
+
+.home-container h1 {
+  color: #1f3c88;
+  margin-bottom: 10px;
+}
+
+.stats-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 180px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f6fb;
+  border: 1px solid #dce2f0;
+  border-radius: 8px;
+}
+
+.stat-card h3 {
+  margin-top: 0;
+}
+
+.stat-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f3c88;
+}
+
+.binding-section {
+  margin-top: 35px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.binding-section input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.binding-section button {
+  padding: 10px 20px;
+  background-color: #1f3c88;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.binding-section button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.message {
+  color: green;
+  font-weight: bold;
+}
+
+.error-message {
+  margin: 15px 0;
+  padding: 12px;
+  color: #a40000;
+  background-color: #ffe8e8;
+  border: 1px solid #e08d8d;
+  border-radius: 6px;
+}
+

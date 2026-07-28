@@ -1,0 +1,90 @@
+<div
+  class="course-card"
+  [ngClass]="cardClasses"
+  [ngStyle]="{
+    'border-left-color': borderColour
+  }"
+>
+  <h2>{{ course.name | uppercase }}</h2>
+
+  <p>
+    <strong>Code:</strong>
+    {{ course.code | uppercase }}
+  </p>
+
+  <p>
+    <strong>Credits:</strong>
+    {{ course.credits | creditLabel }}
+  </p>
+
+  <div [ngSwitch]="course.gradeStatus">
+
+    <span
+      *ngSwitchCase="'passed'"
+      class="status-badge status-passed"
+    >
+      Passed
+    </span>
+
+    <span
+      *ngSwitchCase="'failed'"
+      class="status-badge status-failed"
+    >
+      Failed
+    </span>
+
+    <span
+      *ngSwitchCase="'pending'"
+      class="status-badge status-pending"
+    >
+      Pending
+    </span>
+
+    <span
+      *ngSwitchDefault
+      class="status-badge status-pending"
+    >
+      Unknown
+    </span>
+
+  </div>
+
+  <div
+    class="extra-details"
+    *ngIf="isExpanded"
+  >
+    <p>
+      This course carries
+      {{ course.credits | creditLabel }}.
+    </p>
+
+    <p>
+      Current status:
+      {{ course.gradeStatus | uppercase }}
+    </p>
+  </div>
+
+  {{
+    isExpanded
+      ? 'Hide Details'
+      : 'Show Details'
+  }}
+  <button
+    type="button"
+    [disabled]="isSubmitting"
+    (click)="
+    $event.stopPropagation();
+    requestEnrollment()
+  "
+  >
+    @if (isSubmitting) {
+      Processing...
+    } @else {
+      {{
+        isEnrolled
+          ? 'Unenroll'
+          : 'Enroll'
+      }}
+    }
+  </button>
+</div>

@@ -1,0 +1,304 @@
+<form
+  [formGroup]="enrollForm"
+  (ngSubmit)="onSubmit()"
+  class="enrollment-form"
+>
+
+  <h2>Reactive Enrollment Form</h2>
+
+  <!-- Student Name -->
+
+  <div class="form-group">
+
+    <label for="studentName">
+      Student Name
+    </label>
+
+    <input
+      id="studentName"
+      type="text"
+      formControlName="studentName"
+    >
+
+    @if (
+      studentNameControl?.touched &&
+      studentNameControl?.invalid
+      ) {
+
+      <div class="error">
+
+        @if (
+          studentNameControl?.errors?.['required']
+          ) {
+          <p>
+            Student name is required.
+          </p>
+        }
+
+        @if (
+          studentNameControl?.errors?.['minlength']
+          ) {
+          <p>
+            Minimum 3 characters required.
+          </p>
+        }
+
+      </div>
+
+    }
+
+  </div>
+
+  <!-- Email -->
+
+  <div class="form-group">
+
+    <label for="studentEmail">
+      Student Email
+    </label>
+
+    <input
+      id="studentEmail"
+      type="email"
+      formControlName="studentEmail"
+    >
+
+    @if (
+      studentEmailControl?.pending
+      ) {
+
+      <p>
+        Checking email...
+      </p>
+
+    }
+
+    @if (
+      studentEmailControl?.touched &&
+      studentEmailControl?.invalid
+      ) {
+
+      <div class="error">
+
+        @if (
+          studentEmailControl?.errors?.['required']
+          ) {
+          <p>
+            Email is required.
+          </p>
+        }
+
+        @if (
+          studentEmailControl?.errors?.['email']
+          ) {
+          <p>
+            Invalid email format.
+          </p>
+        }
+
+        @if (
+          studentEmailControl?.errors?.['emailTaken']
+          ) {
+          <p>
+            Email already exists.
+          </p>
+        }
+
+      </div>
+
+    }
+
+  </div>
+
+  <!-- Course Code -->
+
+  <div class="form-group">
+
+    <label for="courseId">
+      Course Code
+    </label>
+
+    <input
+      id="courseId"
+      type="text"
+      formControlName="courseId"
+    >
+
+    @if (
+      courseIdControl?.touched &&
+      courseIdControl?.invalid
+      ) {
+
+      <div class="error">
+
+        @if (
+          courseIdControl?.errors?.['required']
+          ) {
+          <p>
+            Course code is required.
+          </p>
+        }
+
+        @if (
+          courseIdControl?.errors?.['noCourseCode']
+          ) {
+          <p>
+            Course codes beginning with XX are not allowed.
+          </p>
+        }
+
+      </div>
+
+    }
+
+  </div>
+
+  <!-- Semester -->
+
+  <div class="form-group">
+
+    <label for="preferredSemester">
+      Preferred Semester
+    </label>
+
+    <select
+      id="preferredSemester"
+      formControlName="preferredSemester"
+    >
+      <option value="Odd">
+        Odd
+      </option>
+
+      <option value="Even">
+        Even
+      </option>
+    </select>
+
+  </div>
+
+  <!-- Terms -->
+
+  <div class="form-group">
+
+    <label>
+
+      <input
+        type="checkbox"
+        formControlName="agreeToTerms"
+      >
+
+      I agree to the terms and conditions.
+
+    </label>
+
+    @if (
+      termsControl?.touched &&
+      termsControl?.invalid
+      ) {
+
+      <p class="error">
+        You must accept the terms.
+      </p>
+
+    }
+
+  </div>
+
+  <!-- Additional Courses -->
+
+  <div
+    formArrayName="additionalCourses"
+    class="form-group"
+  >
+
+    <h3>
+      Additional Courses
+    </h3>
+
+    @for (
+      control of additionalCourses.controls;
+      track $index
+      ) {
+
+      <div>
+
+        <input
+          type="text"
+          [formControlName]="$index"
+          placeholder="Course Name"
+        >
+
+        <button
+          type="button"
+          (click)="removeCourse($index)"
+        >
+          Remove
+        </button>
+
+      </div>
+
+    }
+
+    <button
+      type="button"
+      (click)="addCourse()"
+    >
+      Add Course
+    </button>
+
+  </div>
+
+  <!-- Buttons -->
+
+  <div class="button-group">
+
+    <button
+      type="submit"
+      [disabled]="
+        isSubmitting ||
+        enrollForm.pending
+      "
+    >
+
+      @if (isSubmitting) {
+
+        Creating Course...
+
+      } @else {
+
+        Submit Enrollment
+
+      }
+
+    </button>
+
+    <button
+      type="button"
+      (click)="resetForm()"
+    >
+      Reset
+    </button>
+
+  </div>
+
+  <!-- Success -->
+
+  @if (successMessage) {
+
+    <p class="success-message">
+      {{ successMessage }}
+    </p>
+
+  }
+
+  <!-- Error -->
+
+  @if (errorMessage) {
+
+    <p class="error-message">
+      {{ errorMessage }}
+    </p>
+
+  }
+
+</form>

@@ -1,0 +1,94 @@
+.course-card {
+  min-height: 300px;
+  padding: 25px;
+  background-color: white;
+  border: 1px solid #d6d6d6;
+  border-left: 8px solid grey;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+  transition:
+    min-height 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.course-card h2 {
+  margin-top: 0;
+  color: #173b8f;
+  font-size: 28px;
+}
+
+.card--enrolled {
+  background-color: #eefaf0;
+}
+
+.card--full {
+  box-shadow: 0 4px 12px rgb(31 60 136 / 30%);
+}
+
+.expanded {
+  min-height: 380px;
+  transform: scale(1.02);
+}
+
+.status-badge {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 6px 14px;
+  color: white;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-passed {
+  background-color: green;
+}
+
+.status-failed {
+  background-color: red;
+}
+
+.status-pending {
+  background-color: grey;
+}
+
+.extra-details {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #f4f6fb;
+  border-radius: 6px;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.button-row button {
+  padding: 9px 16px;
+  background-color: #173b8f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-row button:hover {
+  background-color: #102b69;
+}
+
+.button-row button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.button-row .details-button {
+  background-color: #5b6475;
+}
+
+.button-row .details-button:hover {
+  background-color: #3f4653;
+}

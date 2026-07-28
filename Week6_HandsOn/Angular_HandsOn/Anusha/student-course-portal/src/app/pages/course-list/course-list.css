@@ -1,0 +1,84 @@
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 250px;
+  padding: 11px;
+  font-size: 16px;
+  border: 2px solid #c9ced8;
+  border-radius: 6px;
+}
+
+.search-box button {
+  padding: 10px 18px;
+  color: white;
+  background-color: #173b8f;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-box .clear-button {
+  background-color: #5b6475;
+}
+
+.search-result {
+  color: #555;
+}
+
+.clickable-card {
+  display: block;
+  cursor: pointer;
+}
+
+.error-box {
+  margin: 15px 0;
+  padding: 14px;
+  color: #a40000;
+  background-color: #ffe8e8;
+  border: 1px solid #e08d8d;
+  border-radius: 6px;
+}
+
+.loading-message {
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.course-item {
+  cursor: pointer;
+}
+
+.delete-button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 9px;
+  color: white;
+  background-color: #b3261e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.student-section {
+  margin-top: 35px;
+  padding: 20px;
+  background-color: #eef3ff;
+  border-radius: 8px;
+}
+
+.student-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 8px 0;
+  padding: 12px;
+  background-color: white;
+  border-radius: 5px;
+}

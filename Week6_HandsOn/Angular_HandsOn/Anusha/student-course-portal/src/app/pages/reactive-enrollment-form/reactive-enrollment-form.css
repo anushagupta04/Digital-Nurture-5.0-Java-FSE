@@ -1,0 +1,234 @@
+.enrollment-page {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+  padding: 40px 20px;
+  background-color: #f5f7fb;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 680px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 12%);
+}
+
+.form-card h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #173b8f;
+}
+
+.form-description {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label,
+.additional-input label {
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #222;
+}
+
+.form-group input,
+.form-group select,
+.additional-input input {
+  padding: 11px 12px;
+  font-size: 16px;
+  border: 2px solid #c9ced8;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.additional-input input:focus {
+  border-color: #173b8f;
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+  border-color: green;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  color: #c62828;
+  font-size: 14px;
+}
+
+.checking-message {
+  margin-top: 6px;
+  color: #173b8f;
+  font-size: 14px;
+}
+
+.additional-section {
+  margin: 25px 0;
+  padding: 20px;
+  background-color: #f7f8fc;
+  border-radius: 8px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #173b8f;
+  font-size: 20px;
+}
+
+.additional-course-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.additional-input {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.empty-message {
+  margin-bottom: 0;
+  color: #666;
+  font-style: italic;
+}
+
+.add-button,
+.remove-button {
+  padding: 9px 14px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-button {
+  background-color: #173b8f;
+}
+
+.add-button:hover {
+  background-color: #102b69;
+}
+
+.remove-button {
+  background-color: #b3261e;
+}
+
+.remove-button:hover {
+  background-color: #861c17;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 5px;
+}
+
+.checkbox-group input {
+  width: 18px;
+  height: 18px;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.button-row button {
+  padding: 11px 22px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.submit-button {
+  background-color: #173b8f;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #102b69;
+}
+
+.submit-button:disabled {
+  background-color: #9299a8;
+  cursor: not-allowed;
+}
+
+.reset-button {
+  background-color: #5b6475;
+}
+
+.reset-button:hover {
+  background-color: #3f4653;
+}
+
+.success-message {
+  margin-top: 22px;
+  padding: 15px;
+  color: #17652a;
+  background-color: #e7f7eb;
+  border: 1px solid #78bf87;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .section-heading,
+  .additional-course-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .add-button,
+  .remove-button {
+    width: 100%;
+  }
+}
+
+.success-message {
+  margin-top: 15px;
+  padding: 12px;
+  color: #176b2c;
+  background-color: #e8f7ec;
+  border: 1px solid #81c995;
+  border-radius: 6px;
+}
+
+.error-message {
+  margin-top: 15px;
+  padding: 12px;
+  color: #a40000;
+  background-color: #ffe8e8;
+  border: 1px solid #e08d8d;
+  border-radius: 6px;
+}

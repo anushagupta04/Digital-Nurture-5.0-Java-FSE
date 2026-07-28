@@ -1,0 +1,73 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Angular Fundamentals",
+      "code": "ANG101",
+      "credits": 4,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 2,
+      "name": "Java Programming",
+      "code": "JAV201",
+      "credits": 4,
+      "gradeStatus": "pending"
+    },
+    {
+      "id": 3,
+      "name": "Database Management Systems",
+      "code": "DBMS301",
+      "credits": 3,
+      "gradeStatus": "failed"
+    },
+    {
+      "id": 4,
+      "name": "Cloud Computing",
+      "code": "CC401",
+      "credits": 3,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 5,
+      "name": "Software Engineering",
+      "code": "SE501",
+      "credits": 1,
+      "gradeStatus": "pending"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Anusha Gupta",
+      "email": "anusha@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Rahul Kumar",
+      "email": "rahul@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Priya Sharma",
+      "email": "priya@example.com"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "studentId": 1,
+      "courseId": 1
+    },
+    {
+      "id": 2,
+      "studentId": 2,
+      "courseId": 1
+    },
+    {
+      "id": 3,
+      "studentId": 3,
+      "courseId": 2
+    }
+  ]
+}
